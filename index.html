@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body {
+		font-family: monospace;
+	}
+</style>	
+
+</head>
+<body>
+
+<div>
+測試看看:
+	<input type="text" id="txt1" name="txt1" value="" PlaceHolder="想要幾層?">
+	<input type="button" id="Button1" name="Button1"   
+		value="2. 輸入" onclick="Button1_onclick()">
+	<br><br>
+</div>
+1.<div id="show"></div><br><br><br><br>2.
+<div id = "test1"></div>
+	<script type="text/javascript">
+	function stars(){
+		var count = parseInt(txt1.value)*2-1;
+		var result = ""; 
+		for (row = 1; row <= count; row += 2) {
+			var line = "";
+			for (col = 1; col <= row; col++) {
+				line = line +"*";
+			}
+			var w = "";
+			for (v = 1; v<= (parseInt(txt1.value)*2-1 - row )/2; v++) {
+				w = w + "&nbsp";
+			}
+			result = result + w + line + "<br>";
+		}
+		show.innerHTML = result;
+		var test = "";
+		for ( c = parseInt(txt1.value) - 1; c >= 0; c = c - 1) {
+			var d = "";
+			for (col = 1; col <= c; col++) {
+				 d = d +"*";
+			}
+			test = test + d + "<br>"; 
+			}
+		test1.innerHTML = test;
+	}
+	
+
+		
+	
+	function Button1_onclick() {
+		var times = parseInt(txt1.value)
+		if (times > 0) {
+		stars();
+		}
+		else {
+			alert("Fail")
+		}
+	}
+	
+	
+
+	
+	
+	
+	
+	</script>
+
+	
+</body>
+</html>
