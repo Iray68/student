@@ -12,7 +12,7 @@
 
 	 <div
 	    class="g-recaptcha"
-	    data-sitekey="6LfJb98aAAAAABEiixRekesP2P5aU2BGN7cOCSFy"
+	    data-sitekey="6Lf0A98aAAAAAD7tjBClrarJ6uYa_PN5lZWrrmlv"
 	    data-theme="light" data-size="normal"
 	    data-callback="onSubmit"
 	    data-expired-callback="expired"
@@ -25,7 +25,12 @@
 	     // document.getElementById("demo-form").submit();
 	   }
 
-	   function error(token) {
+	   function expired() {
+	   		console.log("expired");
+	     // document.getElementById("demo-form").submit();
+	   }
+
+	   function error() {
 	   		console.log("error");
 	     // document.getElementById("demo-form").submit();
 	   }
