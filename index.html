@@ -5,18 +5,33 @@
 	<title>Document</title>
 </head>
 <body>
-	<button class="g-recaptcha" 
+	<!-- <button class="g-recaptcha" 
         data-sitekey="6Lf0A98aAAAAAD7tjBClrarJ6uYa_PN5lZWrrmlv" 
         data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+        data-action='submit'>Submit</button> -->
+
+	 <div
+	    class="g-recaptcha"
+	    data-sitekey="6LfJb98aAAAAABEiixRekesP2P5aU2BGN7cOCSFy"
+	    data-theme="light" data-size="normal"
+	    data-callback="onSubmit"
+	    data-expired-callback="expired"
+	    data-error-callback="error">
+	</div>
 
 	<script>
 	   function onSubmit(token) {
 	   		console.log("test ok");
 	     // document.getElementById("demo-form").submit();
 	   }
+
+	   function error(token) {
+	   		console.log("error");
+	     // document.getElementById("demo-form").submit();
+	   }
 	 </script>
 
-	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </body>
 </html>
