@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button class="g-recaptcha" 
+        data-sitekey="6Lcnut4aAAAAAHoh7GaLkNi1-o3F_JZPuOlOMF3K" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+
+	<script>
+	   function onSubmit(token) {
+	   		console.log("test ok");
+	     // document.getElementById("demo-form").submit();
+	   }
+	 </script>
+
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+</html>
